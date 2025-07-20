@@ -2,37 +2,42 @@ package com.example.uberreviewservice.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
-import org.hibernate.annotations.CreationTimestamp;
-import org.springframework.data.annotation.LastModifiedDate;
 
-import java.util.Date;
+import jakarta.persistence.Inheritance;
+import jakarta.persistence.InheritanceType;
+import jakarta.persistence.Table;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
 
 @Entity
-@Table(name = "bookingreview")
-public class Review {
-    @Id// this annotation makes the is property a primary key of our table
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    Long id;
+@Table(name = "booking_review")
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Review extends BaseModel {
 
     @Column(nullable = false)
-    String content;
+    private String content;
 
-    String rating;
+    private Double rating;
 
-    @Column(nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    @CreationTimestamp // this annotation tells spring about the handle when once created
-    Date createdAt;
 
-    @Column(nullable = false)
-    @Temporal(TemporalType.TIMESTAMP)
-    @LastModifiedDate // only handle when something updated at the row
-    Date updatedAt;
 
+    @Override
+    public String toString() {
+        return "Review{" +
+            "createdAt=" + createdAt +
+            ", rating=" + rating +
+            ", content='" + content + '\'' +
+            ", updatedAt=" + updatedAt +
+            '}';
+    }
 }
