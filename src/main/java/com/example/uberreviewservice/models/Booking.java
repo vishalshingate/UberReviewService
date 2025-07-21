@@ -5,6 +5,7 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
@@ -41,5 +42,10 @@ public class Booking extends BaseModel {
 
     private Long totalDistance;
 
+    @ManyToOne
+    private Driver driver; // exact name we have to mention in the mapped by
+
+    @ManyToOne
+    private Passenger passenger;
 
 }
