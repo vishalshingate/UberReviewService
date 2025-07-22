@@ -1,9 +1,7 @@
 package com.example.uberreviewservice.Services;
 
-import com.example.uberreviewservice.models.Booking;
 import com.example.uberreviewservice.models.Driver;
 import com.example.uberreviewservice.models.Passenger;
-import com.example.uberreviewservice.models.Review;
 import com.example.uberreviewservice.repositories.BookingRepository;
 import com.example.uberreviewservice.repositories.DriverRepository;
 import com.example.uberreviewservice.repositories.PassengerRepository;
@@ -12,12 +10,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ReviewService implements CommandLineRunner{
+public class Test implements CommandLineRunner{
 
     private ReviewRepository reviewRepository;
 
@@ -27,7 +24,7 @@ public class ReviewService implements CommandLineRunner{
     @Autowired
     private PassengerRepository passengerRepository;
 
-    public ReviewService(ReviewRepository reviewRepository,  BookingRepository bookingRepository, DriverRepository driverRepository) {
+    public Test(ReviewRepository reviewRepository, BookingRepository bookingRepository, DriverRepository driverRepository) {
         this.reviewRepository = reviewRepository;
         this.bookingRepository = bookingRepository;
         this.driverRepository = driverRepository;

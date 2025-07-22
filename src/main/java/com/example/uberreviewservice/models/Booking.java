@@ -6,6 +6,7 @@ import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Temporal;
@@ -35,19 +36,18 @@ public class Booking extends BaseModel {
     @Enumerated(EnumType.STRING)
     private BookingStatus bookingStatus;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date startTime;
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     private Date endTime;
 
     private Long totalDistance;
 
-    @ManyToOne
-
+    @ManyToOne(fetch = FetchType.LAZY)
     private Driver driver; // exact name we have to mention in the mapped by
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Passenger passenger;
 
 }
