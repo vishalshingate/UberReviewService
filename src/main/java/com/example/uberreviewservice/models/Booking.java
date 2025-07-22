@@ -1,6 +1,7 @@
 package com.example.uberreviewservice.models;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -43,6 +44,7 @@ public class Booking extends BaseModel {
     private Long totalDistance;
 
     @ManyToOne
+
     private Driver driver; // exact name we have to mention in the mapped by
 
     @ManyToOne
