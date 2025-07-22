@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Integer> {
@@ -27,6 +28,8 @@ public interface ReviewRepository extends JpaRepository<Review, Integer> {
 
     @Query("select r from Booking b  inner join Review r  where b.id = :bookingId")
     Review findReviewByBookingId(Long bookingId); // this we need because we made @oneToOne mapping Lazy
+
+    Optional<Review> getReviewsById(Long id);
 
 //    @Query("select com.example.uberreviewservice.repositories(r,p,d) from Booking b inner join Passenger  p inner join Driver d where id =:bookingId")
 //    custom findDriverPassengerReviewByBookingId(Long bookingId);

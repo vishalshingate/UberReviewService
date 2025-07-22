@@ -5,7 +5,7 @@ import com.example.uberreviewservice.repositories.ReviewRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.concurrent.ExecutionException;
+import java.util.Optional;
 
 @Service
 public class ReviewServiceImpl implements ReviewService {
@@ -21,9 +21,16 @@ public class ReviewServiceImpl implements ReviewService {
     }
 
     @Override
-    public Review findReviewById(Long bookingId) {
-        return reviewRepository.findReviewByBookingId(bookingId);
+    public Review findReviewByBookingId(Long bookingId) {
+        return null;
     }
+
+    @Override
+    public Optional<Review> findReviewById(Long id) {
+        return reviewRepository.findById(Math.toIntExact(id));
+    }
+
+
 
     @Override
     public boolean deleteReviewById(Integer bookingId) {
@@ -35,5 +42,16 @@ public class ReviewServiceImpl implements ReviewService {
             e.printStackTrace();
             return false;
         }
+    }
+
+    public Review publishReview(Review review) {
+        try {
+           return reviewRepository.save(review);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+
+        }
+        return review;
     }
 }

@@ -30,9 +30,6 @@ import java.util.Date;
 @Builder
 public class Booking extends BaseModel {
 
-    @OneToOne(cascade ={CascadeType.PERSIST,CascadeType.REMOVE})
-    private Review review;
-
     @Enumerated(EnumType.STRING)
     private BookingStatus bookingStatus;
 
