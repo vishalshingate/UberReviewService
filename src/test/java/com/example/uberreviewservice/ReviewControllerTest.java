@@ -1,12 +1,13 @@
 package com.example.uberreviewservice;
 
+import com.example.uberprojectentity.models.Review;
 import com.example.uberreviewservice.Adapter.CreateReviewDtoToReviewAdapter;
 import com.example.uberreviewservice.Adapter.ResponseReviewAdapter;
 import com.example.uberreviewservice.Controller.ReviewController;
 import com.example.uberreviewservice.Services.ReviewService;
-import com.example.uberreviewservice.dtos.CreateReviewDto;
+
 import com.example.uberreviewservice.dtos.ReviewDto;
-import com.example.uberreviewservice.models.Review;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;

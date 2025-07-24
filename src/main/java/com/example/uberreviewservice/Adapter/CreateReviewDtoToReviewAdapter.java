@@ -1,7 +1,7 @@
 package com.example.uberreviewservice.Adapter;
 
+import com.example.uberprojectentity.models.Review;
 import com.example.uberreviewservice.dtos.CreateReviewDto;
-import com.example.uberreviewservice.models.Review;
 
 public interface CreateReviewDtoToReviewAdapter {
 

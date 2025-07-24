@@ -1,7 +1,8 @@
 package com.example.uberreviewservice.Services;
 
-import com.example.uberreviewservice.models.Driver;
-import com.example.uberreviewservice.models.Passenger;
+
+import com.example.uberprojectentity.models.Driver;
+import com.example.uberprojectentity.models.Passenger;
 import com.example.uberreviewservice.repositories.BookingRepository;
 import com.example.uberreviewservice.repositories.DriverRepository;
 import com.example.uberreviewservice.repositories.PassengerRepository;
@@ -64,7 +65,7 @@ public class Test implements CommandLineRunner{
 
         List<Passenger>passengers= passengerRepository.findAll();
         for(Passenger p:passengers){
-            System.out.print(p.getFirstName());
+            System.out.print(p.getName());
         }
 
 

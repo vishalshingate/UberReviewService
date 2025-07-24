@@ -1,6 +1,7 @@
 package com.example.uberreviewservice.Services;
 
-import com.example.uberreviewservice.models.Review;
+
+import com.example.uberprojectentity.models.Review;
 import com.example.uberreviewservice.repositories.ReviewRepository;
 import org.springframework.stereotype.Service;
 

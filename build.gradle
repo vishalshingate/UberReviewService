@@ -21,6 +21,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -28,6 +29,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.flywaydb:flyway-core:11.10.3'
     implementation 'org.flywaydb:flyway-mysql:11.10.3'
+    implementation files('C:/Users/vshingate/.m2/repository/com/example/UberProject-Entity/0.0.5-SNAPSHOT/UberProject-Entity-0.0.5-SNAPSHOT.jar')
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'com.mysql:mysql-connector-j'

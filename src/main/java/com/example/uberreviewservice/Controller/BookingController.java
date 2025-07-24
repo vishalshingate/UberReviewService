@@ -1,8 +1,7 @@
 package com.example.uberreviewservice.Controller;
 
-import com.example.uberreviewservice.models.Booking;
-import com.example.uberreviewservice.models.Driver;
-import com.example.uberreviewservice.models.Review;
+
+import com.example.uberprojectentity.models.Review;
 import com.example.uberreviewservice.repositories.BookingRepository;
 import com.example.uberreviewservice.repositories.DriverRepository;
 import com.example.uberreviewservice.repositories.PassengerRepository;

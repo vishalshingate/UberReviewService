@@ -1,11 +1,10 @@
 package com.example.uberreviewservice.repositories;
 
-import com.example.uberreviewservice.models.Booking;
-import com.example.uberreviewservice.models.Driver;
-import com.example.uberreviewservice.models.Passenger;
-import com.example.uberreviewservice.models.Review;
-import org.aspectj.weaver.patterns.ThisOrTargetAnnotationPointcut;
-import org.springframework.boot.CommandLineRunner;
+
+import com.example.uberprojectentity.models.Driver;
+import com.example.uberprojectentity.models.Passenger;
+import com.example.uberprojectentity.models.Review;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

@@ -1,12 +1,13 @@
 package com.example.uberreviewservice.Controller;
 
+import com.example.uberprojectentity.models.Review;
 import com.example.uberreviewservice.Adapter.CreateReviewDtoToReviewAdapter;
 import com.example.uberreviewservice.Adapter.ResponseReviewAdapter;
-import com.example.uberreviewservice.Adapter.ResponseReviewAdapterImpl;
+
 import com.example.uberreviewservice.Services.ReviewService;
 import com.example.uberreviewservice.dtos.CreateReviewDto;
 import com.example.uberreviewservice.dtos.ReviewDto;
-import com.example.uberreviewservice.models.Review;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
